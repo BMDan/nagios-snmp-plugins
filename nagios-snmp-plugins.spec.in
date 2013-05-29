@@ -23,6 +23,7 @@ These plugins allow you to monitor on a remote machine via SNMP:
 
 %prep
 %setup -q
+./autogen.sh
 
 %build
 %configure \

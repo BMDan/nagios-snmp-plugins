@@ -178,9 +178,9 @@ int main (int argc, char *argv[])
 
 //Note: This results in BFs that look like:
 // 8 7 6 5 4 3 2 1 16 15 14 13 12 11 10 9 24 23 22 21 20 19 18 17 etc.
-#define BITFIELD_SET(bf,pos) (bf)[(int) floor((pos)/8)] |= (unsigned char) (1<<((pos)%8))
-#define BITFIELD_BIT(bf,pos) (unsigned char) ((bf)[(int) floor((pos)/8)] & (char) (1<<((pos)%8)))
-#define BITFIELD_CLR(bf,pos) (bf)[(int) floor((pos)/8)] &= ~((unsigned char) (1<<((pos)%8)))
+#define BITFIELD_SET(bf,pos) (bf)[(int) ((pos)/8)] |= (unsigned char) (1<<((pos)%8))
+#define BITFIELD_BIT(bf,pos) (unsigned char) ((bf)[(int) ((pos)/8)] & (char) (1<<((pos)%8)))
+#define BITFIELD_CLR(bf,pos) (bf)[(int) ((pos)/8)] &= ~((unsigned char) (1<<((pos)%8)))
 
 int report_disk()
 {
