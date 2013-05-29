@@ -92,6 +92,7 @@ extern char *version;    // Version of the Program
 extern int timeout;      // Timeout (set with -t)
 extern int verbose;      // Verbosity (set with -v)
 extern int listing;      // List mode (set with -l)
+extern int manual_critical; // Override OS/SNMPd Definition of Minimum Free Space (-c)
 extern char *community;  // SNMP Community (set with -C)
 extern char *hostname;   // Hostname (set with -H)
 

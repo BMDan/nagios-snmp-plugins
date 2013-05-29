@@ -31,6 +31,7 @@ char *bn;              // basename of the program (set in main)
 int timeout = 0;       // Timeout for Queries (0 == default)
 int verbose = 0;       // Verbosity (0 == not verbose, for production)
 int listing = 0;       // Listing mode (0 == default)
+int manual_critical = -1;	//Manual threshold for free space (-1 == use OS/SNMPd)
 
 char *community = NULL;  // Community, must be set
 char *hostname  = NULL;  // Hostname, must be set
@@ -48,6 +49,7 @@ void print_help()
   printf("-C, --community <name>:      Set SNMP community (required)\n");
   printf("-H, --hostname <name>:       Set Hostname to scan (required)\n");
   printf("-v, --verbose:               Increase verbosity (for testing)\n");
+  printf("-c <pct>, --critical <pct>:  DEcrease snmpd critical threshold to (pct)\n");
 }
 
 /**
